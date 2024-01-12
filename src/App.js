@@ -1,18 +1,19 @@
-import React, {useEffect, useState, useSyncExternalStore} from "react"; //Hook useEffect nos permite manejar efectos colaterales, como la llamada de red, en este caso la llamada a la API.
+import React, {useEffect, useState} from "react"; //Hook useEffect nos permite manejar efectos colaterales, como la llamada de red, en este caso la llamada a la API.
 import Navbar from "./components/Navbar";
-
-
+import CharacterList from "./components/CharacterList";
+import Pagination from "./components/Pagination";
 
 function App() {
 
-  useSta
-
+  const [characters, setCharacters] = useState([]);
+  //const [info, setInfo] = useState({});
+  //const url = "https://rickandmortyapi.com/api/character";
   const initialUrl = "https://rickandmortyapi.com/api/character"
 
   const fetchCharacters = () =>{
     fetch(initialUrl)
     .then(response => response.json())
-    .then(data =>console.log(data.results))
+    .then(data => setCharacters(data.results))
     .catch(error => console.log(error))
   };
 
@@ -21,8 +22,17 @@ function App() {
   }, [])
 
   return ( 
+  <>
     <Navbar brand="Rick & Morty App" />
+    
+    <div className="container mt-5">
+      <Pagination />
+      <CharacterList characters={characters} />
+      <Pagination />
+    </div>
+  </>
   );
 }
+
 
 export default App;
