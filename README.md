@@ -4,6 +4,8 @@ Este es mi primer proyecto usando React [Create React App](https://github.com/fa
 El cual consiste en una aplicación de los personajes de la serie animada Rick & Morty.
 A continuación, encontrarás una guía paso a paso para configurar y ejecutar el proyecto tu mismo.
 
+![primera página de la app de Rick and Morty!](/public/r&m.png)
+
 
 ## Tabla de contenido
 
