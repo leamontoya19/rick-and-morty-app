@@ -7,7 +7,6 @@ function App() {
 
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState({});
-  //const url = "https://rickandmortyapi.com/api/character";
   const initialUrl = "https://rickandmortyapi.com/api/character"
 
   const fetchCharacters = (url) =>{
