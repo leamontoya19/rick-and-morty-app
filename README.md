@@ -38,9 +38,6 @@ La aplicación mostrará una lista de personajes de Rick & Morty obtenidos de la
 ## Contribuciones
 Las contribuciones son bienvenidas. Si encuentras algún problema o tienes alguna idea de mejora, por favor, abre un issue o envía una solicitud de pull request.
 
-## Deployment
-El siguiente es el link del deployment: [deployment](https://facebook.github.io/create-react-app/docs/deployment) 
-
 
 ## Licencia
 
