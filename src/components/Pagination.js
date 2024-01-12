@@ -1,15 +1,30 @@
 import React from 'react'
 
-const Pagination = () => {
+const Pagination = ({ prev, next, onPrevious, onNext}) => {
+
+    const handlePrevious = () => {
+        onPrevious();
+    }
+
+    const handleNext = () => {
+        onNext();
+    }
+
   return (
-    <nav>
+    <nav className='my-5'>
         <ul className='pagination justify-content-center'>
-            <li className='page-item'>
-                <button className='page-link'>Previous</button>
-            </li>
-            <li className='page-item'>
-                <button className='page-link'>Next</button>
-            </li>
+            {
+              prev ? (
+              <li className='page-item'>
+                <button className='page-link' onClick={handlePrevious}>Previous</button>
+              </li>
+              ) : null}
+            {
+              next ? (
+              <li className='page-item'>
+                <button className='page-link' onClick={handleNext}>Next</button>
+              </li>
+              ) : null}  
         </ul>
       
     </nav>
